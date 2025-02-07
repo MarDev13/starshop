@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Attribute\Route;
 class StarshipApiController extends AbstractController
 {
     #[Route('/api/starships/{id}')]
-    public function getCollection(LoggerInterface $logger, StarshipRepository $repository, $id): Response
+    public function getCollection(LoggerInterface $logger, StarshipRepository $repository, int $id): Response
     {
         $starships = $repository->findAll();
 
