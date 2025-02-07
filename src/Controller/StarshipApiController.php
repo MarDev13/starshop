@@ -13,7 +13,7 @@ class StarshipApiController extends AbstractController
     #[Route('/api/starships')]
     public function getCollection(LoggerInterface $logger): Response
     {
-        dd($logger);
+        $logger->info('solicitadas todas las naves');
         $starships = [
             new Starship(
                 1,
