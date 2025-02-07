@@ -7,8 +7,10 @@ use Psr\Log\LoggerInterface;
 
 class StarshipRepository
 {
+    public function __construct(private LoggerInterface $loger){}
     public function findAll(): array
     {
+        $this->loger->warning('Mola');
         return [
             new Starship(
                 1,
