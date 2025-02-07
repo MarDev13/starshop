@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class StarshipApiController extends AbstractController
 {
-    #[Route('/api/starships/{id}')]
+    #[Route('/api/starships/{id<\d+>}')]
     public function getCollection(LoggerInterface $logger, StarshipRepository $repository, int $id): Response
     {
         $starships = $repository->findAll();
