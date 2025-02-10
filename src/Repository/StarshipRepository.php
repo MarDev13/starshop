@@ -44,8 +44,7 @@ class StarshipRepository
         foreach($this->findAll() as $starship){
             if($starship->getId() === $id){
                 return $starship;
-            }
-           
+            }   
         }
         return null;
     }
