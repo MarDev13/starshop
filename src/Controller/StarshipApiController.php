@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Model\Starship;
 use App\Repository\StarshipRepository;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -25,4 +26,6 @@ class StarshipApiController extends AbstractController
         $starships = $repository->findAll();
         return $this->json($starships[$id]);
     }
+
+   
 }
