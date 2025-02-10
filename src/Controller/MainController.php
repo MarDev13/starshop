@@ -20,5 +20,4 @@ class MainController extends AbstractController
             'ships' => $ships,
         ]);
     }
-    
 }
