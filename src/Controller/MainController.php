@@ -20,4 +20,15 @@ class MainController extends AbstractController
             'ships' => $ships,
         ]);
     }
+    #[Route('/show', 'app_starship_show')]
+    public function show(StarshipRepository $starshipRepository): Response
+    {
+        $ships = $starshipRepository->findAll();
+        $myShip = $ships[array_rand($ships)];
+
+        return $this->render('main/homepage.html.twig', [
+            'myShip' => $myShip,
+            'ships' => $ships,
+        ]);
+    }
 }
